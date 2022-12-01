@@ -1,0 +1,294 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- stle for tag contol start-->
+    <style>
+        /*line 6, ../sass/inputTag.scss */
+        #tags {
+          margin: 100px auto 0 auto;
+          max-width: 600px;
+          border: 1px solid #cccccc7a;
+          padding: 5px;
+        }
+        /* line 21, ../sass/inputTag.scss */
+        #tags .tag {
+          position: relative;
+          display: block;
+          float: left;
+          color: #FFFFFF;
+          background: #8cce0c;
+          padding: 5px 20px 5px 5px;
+          margin: 4px;
+          border-radius: 2px;
+          font-size: 12px;
+          line-height: 12px;
+          font-family: "Lato Heavy";
+          transition: all 0.3s ease-in-out;
+        }
+        /* line 35, ../sass/inputTag.scss */
+        #tags .tag .close {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 14px;
+          height: 100%;
+          background: #75ac0a;
+          cursor: pointer;
+          border-radius: 0 2px 2px 0;
+          transition: background 0.3s;
+        }
+        /* line 45, ../sass/inputTag.scss */
+        #tags .tag .close:after {
+          position: absolute;
+          content: "×";
+          top: 6px;
+          left: 3px;
+          font-weight: 900;
+        }
+        /* line 53, ../sass/inputTag.scss */
+        #tags .tag .close:hover {
+          background: rgba(215, 65, 70, 0.87);
+        }
+        /* line 60, ../sass/inputTag.scss */
+        #tags input {
+          border: 0;
+          margin: 4px;
+          padding: 3px 7px 3px 0;
+          width: auto;
+          outline: none;
+        }
+  
+      </style>
+    <!-- stle for tag contol end -->
+
+    <link href="css/boostrap-5-2-3-css/bootstrap.min.css" rel="stylesheet"> 
+    <!-- multiselect1.1.2 yi indirip kullanmaya çalıştığımda sayfa yapı bozuluyor o yüzden : cdn'den çekiyorum. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/1.1.2/css/bootstrap-multiselect.min.css" integrity="sha512-fZNmykQ6RlCyzGl9he+ScLrlU0LWeaR6MO/Kq9lelfXOw54O63gizFMSD5fVgZvU1YfDIc6mxom5n60qJ1nCrQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     
+    <!-- css for dataTable start -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.4.0/css/responsive.dataTables.min.css"/>
+    <!--css for dataTable end-->
+
+</head>
+<body>
+    
+    <p>test sayfasıdır</p>
+    
+    <button onclick="selectClick()">selectClick</button>
+    <button onclick="multiSelectClick()">multiSelectClick</button>
+    </br>
+    </br>
+
+    <div id="forSelect">
+
+    </div>
+    </br>
+    </br>
+    </br>
+    </br>
+    <div id="forMultiSelect">
+
+    </div>
+    
+    <select id="testMulti" multiple="multiple">
+        <option value="cheese">Cheese</option>
+        <option value="tomatoes">Tomatoes</option>
+        <option value="mozarella">Mozzarella</option>
+        <option value="mushrooms">Mushrooms</option>
+        <option value="pepperoni">Pepperoni</option>
+        <option value="onions">Onions</option>
+    </select> 
+
+    <!-- html for tag contol start-->
+    <div id="keep">
+        <div class="row" id="tags"> 
+            <input type="text" id="add_tag"  placeholder="Add a tag......"> <!-- add_tag-->
+            <div class="tags_dropdown"></div> 
+        </div>
+    </div>
+   <div>
+    <input type="text" id="test" value="sadasd"  placeholder="Add a tag......">
+    <button type="button" onclick="show()" id="click" >Click Me!</button>
+    <button type="button" onclick="test()" id="test" >test</button>
+   </div>
+   <!-- html for tag contol end-->
+
+   <!-- html for data table start -->
+    <div id="ChangeObDiv" style="margin-top: 20px; text-align: left; ">
+        <table class="table table-striped table-bordered display responsive nowrap" id="reqList" style="width:100%">
+            <thead>
+                <tr style="text-align: center;">
+                                        <th><p>Column 1</p></th>
+                    <th><p>Column 2</p></th>
+                    <th><p>Column 3</p></th>
+                    <th><p>Column 4</p></th>
+                    <th><p>Column 5</p></th>
+                    <th><p>Column 6</p></th>
+                    <th><p>Column 7</p></th>
+                    <th><p>Column 8</p></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><p>bir</p></td>
+                    <td><p>iki</p></td>
+                    <td><p>üç</p></td>
+                    <td><p>dört</p></td>
+                    <td><p>dört</p></td>
+                    <td><p>dört</p></td>
+                    <td><p>iki</p></td>
+                    <td><p>üç</p></td>
+                </tr>
+                <tr>
+                    <td><p>bir_</p></td>
+                    <td><p>iki_</p></td>
+                    <td><p>üç_</p></td>
+                    <td><p>dört_</p></td>
+                    <td><p>dört_</p></td>
+                    <td><p>dört_</p></td>
+                    <td><p>iki_</p></td>
+                    <td><p>üç_</p></td>
+                </tr>
+                <tr>
+                    <td><p>_bir</p></td>
+                    <td><p>_iki</p></td>
+                    <td><p>portakal</p></td>
+                    <td><p>_dört</p></td>
+                    <td><p>_dört</p></td>
+                    <td><p>_dört</p></td>
+                    <td><p>_iki</p></td>
+                    <td><p>portakal</p></td>
+                </tr>
+                <tr>
+                    <td><p>start</p></td>
+                    <td><p>elma </p></td>
+                    <td><p>armut</p></td>
+                    <td><p>fakli</p></td>
+                    <td><p>fakli</p></td>
+                    <td><p>fakli</p></td>
+                    <td><p>elma </p></td>
+                    <td><p>armut</p></td>
+                </tr>
+                <tr>
+                    <td><p>bir</p></td>
+                    <td><p>iki</p></td>
+                    <td><p>üç</p></td>
+                    <td><p>dört</p></td>
+                    <td><p>dört</p></td>
+                    <td><p>dört</p></td>
+                    <td><p>iki</p></td>
+                    <td><p>üç</p></td>
+                </tr>
+                <tr>
+                    <td><p>bir_</p></td>
+                    <td><p>iki_</p></td>
+                    <td><p>üç_</p></td>
+                    <td><p>dört_</p></td>
+                    <td><p>dört_</p></td>
+                    <td><p>dört_</p></td>
+                    <td><p>iki_</p></td>
+                    <td><p>üç_</p></td>
+                </tr>
+                <tr>
+                    <td><p>_bir</p></td>
+                    <td><p>_iki</p></td>
+                    <td><p>portakal</p></td>
+                    <td><p>_dört</p></td>
+                    <td><p>_dört</p></td>
+                    <td><p>_dört</p></td>
+                    <td><p>_iki</p></td>
+                    <td><p>portakal</p></td>
+                </tr>
+                <tr>
+                    <td><p>start</p></td>
+                    <td><p>elma </p></td>
+                    <td><p>armut</p></td>
+                    <td><p>fakli</p></td>
+                    <td><p>fakli</p></td>
+                    <td><p>fakli</p></td>
+                    <td><p>elma </p></td>
+                    <td><p>armut</p></td>
+                </tr>
+                <tr>
+                    <td><p>bir</p></td>
+                    <td><p>iki</p></td>
+                    <td><p>üç</p></td>
+                    <td><p>dört</p></td>
+                    <td><p>dört</p></td>
+                    <td><p>dört</p></td>
+                    <td><p>iki</p></td>
+                    <td><p>üç</p></td>
+                </tr>
+                <tr>
+                    <td><p>bir_</p></td>
+                    <td><p>iki_</p></td>
+                    <td><p>üç_</p></td>
+                    <td><p>dört_</p></td>
+                    <td><p>dört_</p></td>
+                    <td><p>dört_</p></td>
+                    <td><p>iki_</p></td>
+                    <td><p>üç_</p></td>
+                </tr>
+                <tr>
+                    <td><p>_bir</p></td>
+                    <td><p>_iki</p></td>
+                    <td><p>portakal</p></td>
+                    <td><p>_dört</p></td>
+                    <td><p>_dört</p></td>
+                    <td><p>_dört</p></td>
+                    <td><p>_iki</p></td>
+                    <td><p>portakal</p></td>
+                </tr>
+                <tr>
+                    <td><p>start</p></td>
+                    <td><p>elma </p></td>
+                    <td><p>armut</p></td>
+                    <td><p>fakli</p></td>
+                    <td><p>fakli</p></td>
+                    <td><p>fakli</p></td>
+                    <td><p>elma </p></td>
+                    <td><p>armut</p></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- html for data table end -->
+
+    <script src="js/bootstrap-5-2-3-js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3-6-1-js/jquery-3.6.1.min.js"></script> 
+    
+    <!--js for multiSelect start -->
+    <script src="js/bootstrap-multiselect-1-1-2-js/bootstrap-multiselect.min.js"></script>
+    <!--js for multiSelect end -->
+
+    <!--js for dataTable start -->
+    <script type="text/javascript" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.4.0/js/dataTables.responsive.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
+    <!--js for dataTable end -->
+</body>
+
+<!--js for dataTable start-->
+<script>
+        $(document).ready(function ()
+        {
+                //sbo talep detay sayfasındaki ana tablo için
+                $('#reqList').DataTable({
+                    "pageLength": 25,
+                    "language":
+                    {
+                        "url": "https://cdn.datatables.net/plug-ins/1.10.20/i18n/Turkish.json"
+                    }
+                });
+            
+        });
+</script>
+<!--js for dataTable end-->
+
+</html>
