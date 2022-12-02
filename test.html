@@ -127,7 +127,7 @@
         <table class="table table-striped table-bordered display responsive nowrap" id="reqList" style="width:100%">
             <thead>
                 <tr style="text-align: center;">
-                                        <th><p>Column 1</p></th>
+                    <th><p>Column 1</p></th>
                     <th><p>Column 2</p></th>
                     <th><p>Column 3</p></th>
                     <th><p>Column 4</p></th>
@@ -139,8 +139,8 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><p>bir</p></td>
-                    <td><p>iki</p></td>
+                    <td><p data-toggle="tooltip" title="elma">bir</p></td>
+                    <td><p data-toggle="tooltip" title="bir tooltip">iki</p></td>
                     <td><p>üç</p></td>
                     <td><p>dört</p></td>
                     <td><p>dört</p></td>
@@ -409,7 +409,7 @@ function addItemtoSelect(){
 </script>
 <!-- js for multiselect end -->
 
-<!-- js for tag start-->
+<!-- js for tag start -->
 <script>
     var values ;
     tut();
@@ -604,5 +604,12 @@ function addItemtoSelect(){
 </script>
 <!-- js for tag end-->
 
+<!-- js for tooltip start -->
+<script>
+$(document).ready(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+<!-- js for tooltip end -->
 
 </html>
