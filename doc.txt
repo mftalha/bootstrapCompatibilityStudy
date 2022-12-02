@@ -39,3 +39,4 @@ kullanılan kütüphaneler : boostrap-5-2-3-css;  bootstrap-5-2-3-js;
 [Modal]
 -Mevcut kütüphaneler ile sorunsuz çalıştı : Bootstrapp kütüphanelerini istiyordur sadece büyük ihtimal.
 kullanılan kütüphaneler : boostrap-5-2-3-css;  bootstrap-5-2-3-js;
+https://getbootstrap.com/docs/5.0/components/modal/
