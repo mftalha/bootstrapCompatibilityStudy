@@ -1,0 +1,37 @@
+- Bootstrap ve jQuery kullanılan compenentlerin : kütüphanelerini son versiyonlara çekme ve ilgili comenentleri son versiyonda çalışır hale getirme işlemi.
+- Oluşturulma tarihi : 02.12.2022 = [MTS]
+
+[DataTable]
+// DataTable yeni versiyon'a göre güncellenirken yapılması gerekenler.
+// data table kaçtane veri geleceğini seçtiğim select'e bir kayma oluyor ondan bir style oluşturdum.
+- Step 1. Choose a styling framework : DataTables
+- Step 2. Select packages : jQuery 3 , DataTables
+- Extensions : Responsive
+- aşşağıdaki linklerden : Minify'i seçiyorum = min dosyalarını oluşturuyor : js ve css dosyaları için bu seçenek.;;; Concatenate seçmiyorum : bütün kütüphanaleri iç içe yazan bi sistem ayarlıyor = aynı link içinde.
+- Step 3. Pick a download method : burdan [cdn] seçersem bana cdn linklerini verir inecek kütüphanelerin. [Download] seçersem gelen kütüphaneleri indiremek için en altta buton koyar ve link yazan yerdede .html sayfası ile aynı dizine inen zipi açtığım takdirde tam çalışacak şekilde link yollarını verir.
+= https://datatables.net/download/ :: yukardaki işlemleri yaptığım sayfa
+
+data table için kullanılan kütüphanler : boostrap-5-2-3-css; DataTables-1-13-1-css; Responsive-2-4-0-css; bootstrap-5-2-3-js; DataTables-1-13-1-js; jquery-3-6-1-js; Responsive-2-4-0-js
+
+[MultiSelect]
+//MultiSelect yeni versiyon'a göre güncellenirken yapılması gerekenler.
+- bootstrap 5 e göre güncellerken combobox butonundan kaynaklı bir hata vardı. giderildi. = test.html sayfasında mevcut.
+- multi select için web sitesi ve github üzerinden bakıldığında : birsürü compenenti var eklenebilir : ben ekledim bir kısmını. 
+= https://davidstutz.github.io/bootstrap-multiselect/
+
+kullanılan kütüphaneler : boostrap-5-2-3-css; bootstrap-multiselect-1-1-2-js; bootstrap-5-2-3-js; (jquery olabilir emin değilim şuan)
+
+[Select]
+//Select yeni versiyon'a göre güncellenirken yapılması gerekenler.
+kullanılan kütüphaneler : boostrap-5-2-3-css;  bootstrap-5-2-3-js; (jquery olabilir emin değilim şuan)
+
+[Tag]
+//Tag yeni versiyon'a göre güncellenirken yapılması gerekenler.
+-Tag içine ben 1 fonksiyon eklemiştim her eklemeden sonra js sayfasında eklenen veriyi almak için : ama bu hata oluşturmayabilir çünkü tüm fonksiyonları zaten bizim sayfamızda : kütüphane değilde birisi yazmış galiba bende aldım.
+kullanılan kütüphaneler : boostrap-5-2-3-css;  bootstrap-5-2-3-js; jquery-3-6-1-js; //botstraplardan emin değilim.
+
+Not: bir kütüphaneyi denerken: https://cdnjs.com/ sayfasından son versiyonuna erişim sağlayabilirim : cdn link olarak.
+
+[ToolTip]
+- Bootstrap'ın son versiyonunu sayfaya ekleyip js te tooltip çağırma yı kullanmam yeterli oldu.
+kullanılan kütüphaneler : boostrap-5-2-3-css;  bootstrap-5-2-3-js;

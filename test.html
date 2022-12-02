@@ -68,15 +68,24 @@
       </style>
     <!-- stle for tag contol end -->
 
+    <!-- stle for dataTable start -->
+    <style>
+        /* Data table id si değil çalışma zamanındaki id yi alıyorum == data table kaçtane veri geleceğini seçtiğim select : tablo için*/
+        #reqList_wrapper div.dataTables_length select{
+            width:33%;
+        }
+    </style>
+    <!-- stle for dataTable end -->
+
     <link href="css/boostrap-5-2-3-css/bootstrap.min.css" rel="stylesheet"> 
     <!-- multiselect1.1.2 yi indirip kullanmaya çalıştığımda sayfa yapı bozuluyor o yüzden : cdn'den çekiyorum. -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/1.1.2/css/bootstrap-multiselect.min.css" integrity="sha512-fZNmykQ6RlCyzGl9he+ScLrlU0LWeaR6MO/Kq9lelfXOw54O63gizFMSD5fVgZvU1YfDIc6mxom5n60qJ1nCrQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
      
     <!-- css for dataTable start -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.4.0/css/responsive.dataTables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/DataTables-1-13-1-css/jquery.dataTables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/Responsive-2-4-0-css/responsive.dataTables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/DataTables-1-13-1-css/dataTables.bootstrap5.min.css"/>
     <!--css for dataTable end-->
-
 </head>
 <body>
     
@@ -271,9 +280,9 @@
     <!--js for multiSelect end -->
 
     <!--js for dataTable start -->
-    <script type="text/javascript" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.4.0/js/dataTables.responsive.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
+    <script type="text/javascript" src="js/DataTables-1-13-1-js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="js/Responsive-2-4-0-js/dataTables.responsive.min.js"></script>
+    <script type="text/javascript" src="js/DataTables-1-13-1-js/dataTables.bootstrap5.min.js"></script>
     <!--js for dataTable end -->
 </body>
 
