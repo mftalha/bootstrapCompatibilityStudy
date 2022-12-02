@@ -35,3 +35,7 @@ Not: bir kütüphaneyi denerken: https://cdnjs.com/ sayfasından son versiyonuna
 [ToolTip]
 - Bootstrap'ın son versiyonunu sayfaya ekleyip js te tooltip çağırma yı kullanmam yeterli oldu.
 kullanılan kütüphaneler : boostrap-5-2-3-css;  bootstrap-5-2-3-js;
+
+[Modal]
+-Mevcut kütüphaneler ile sorunsuz çalıştı : Bootstrapp kütüphanelerini istiyordur sadece büyük ihtimal.
+kullanılan kütüphaneler : boostrap-5-2-3-css;  bootstrap-5-2-3-js;
