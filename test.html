@@ -6,82 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <!-- stle for tag contol start-->
-    <style>
-        /*line 6, ../sass/inputTag.scss */
-        #tags {
-          margin: 100px auto 0 auto;
-          max-width: 600px;
-          border: 1px solid #cccccc7a;
-          padding: 5px;
-        }
-        /* line 21, ../sass/inputTag.scss */
-        #tags .tag {
-          position: relative;
-          display: block;
-          float: left;
-          color: #FFFFFF;
-          background: #8cce0c;
-          padding: 5px 20px 5px 5px;
-          margin: 4px;
-          border-radius: 2px;
-          font-size: 12px;
-          line-height: 12px;
-          font-family: "Lato Heavy";
-          transition: all 0.3s ease-in-out;
-        }
-        /* line 35, ../sass/inputTag.scss */
-        #tags .tag .close {
-          position: absolute;
-          top: 0;
-          right: 0;
-          width: 14px;
-          height: 100%;
-          background: #75ac0a;
-          cursor: pointer;
-          border-radius: 0 2px 2px 0;
-          transition: background 0.3s;
-        }
-        /* line 45, ../sass/inputTag.scss */
-        #tags .tag .close:after {
-          position: absolute;
-          content: "×";
-          top: 6px;
-          left: 3px;
-          font-weight: 900;
-        }
-        /* line 53, ../sass/inputTag.scss */
-        #tags .tag .close:hover {
-          background: rgba(215, 65, 70, 0.87);
-        }
-        /* line 60, ../sass/inputTag.scss */
-        #tags input {
-          border: 0;
-          margin: 4px;
-          padding: 3px 7px 3px 0;
-          width: auto;
-          outline: none;
-        }
-        #example-optionClass-container .multiselect-container .odd:not(.active) {
-        background: #eeeeee;
-        }
-      </style>
-    <!-- stle for tag contol end -->
 
-    <!-- stle for dataTable start -->
-    <style>
-        /* Data table id si değil çalışma zamanındaki id yi alıyorum == data table kaçtane veri geleceğini seçtiğim select : tablo için*/
-        #reqList_wrapper div.dataTables_length select{
-            width:33%;
-        }
-    </style>
-    <!-- stle for dataTable end -->
+    <link rel="stylesheet" type="text/css" href="css/JqueryTag-css/jqueryTag.css"/>
 
     <link href="css/boostrap-5-2-3-css/bootstrap.min.css" rel="stylesheet"> 
     <!-- multiselect1.1.2 yi indirip kullanmaya çalıştığımda sayfa yapı bozuluyor o yüzden : cdn'den çekiyorum. -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/1.1.2/css/bootstrap-multiselect.min.css" integrity="sha512-fZNmykQ6RlCyzGl9he+ScLrlU0LWeaR6MO/Kq9lelfXOw54O63gizFMSD5fVgZvU1YfDIc6mxom5n60qJ1nCrQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-     
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/1.1.2/css/bootstrap-multiselect.min.css" integrity="sha512-fZNmykQ6RlCyzGl9he+ScLrlU0LWeaR6MO/Kq9lelfXOw54O63gizFMSD5fVgZvU1YfDIc6mxom5n60qJ1nCrQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />-->
+    <link rel="stylesheet" type="text/css" href="css/MultiSelect-1-1-2-css/multiselect.min.css"/>
+
     <!-- css for dataTable start -->
+    <link rel="stylesheet" type="text/css" href="css/DataTables-1-13-1-css/dataTables-Change.css"/>
     <link rel="stylesheet" type="text/css" href="css/DataTables-1-13-1-css/jquery.dataTables.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/Responsive-2-4-0-css/responsive.dataTables.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/DataTables-1-13-1-css/dataTables.bootstrap5.min.css"/>

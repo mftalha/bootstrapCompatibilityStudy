@@ -1,0 +1,4 @@
+/* Data table id si değil çalışma zamanındaki id yi alıyorum == data table kaçtane veri geleceğini seçtiğim select : tablo için*/
+#reqList_wrapper div.dataTables_length select{
+    width:33%;
+}
